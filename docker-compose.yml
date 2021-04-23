@@ -1,0 +1,14 @@
+version: "3.1"
+services:
+    app:
+      container_name: phalcon-server
+      build: docker/app
+      restart: always
+      ports:
+        - "8910:80"
+      volumes:
+        - ./phpconfig:/usr/local/etc/php
+        - ./application:/var/www/html
+
+      
+

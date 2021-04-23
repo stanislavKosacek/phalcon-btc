@@ -1,0 +1,12 @@
+{
+  "name": "stanislav-kosacek/dockerized-phalcon",
+  "description": "Base project with docker, debian, php 7.4, apache, phalcon, composer",
+  "authors": [
+    {
+      "name": "Stanislav Kosáček"
+    }
+  ],
+  "require": {
+    "php": "^7.4"
+  }
+}
