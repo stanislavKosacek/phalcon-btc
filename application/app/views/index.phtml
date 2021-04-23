@@ -9,5 +9,6 @@
 <div class="container">
     <?php echo $this->getContent(); ?>
 </div>
+<?php  $this->assets->exists('js') ? $this->assets->outputJs() : NULL; ?>
 </body>
 </html>
