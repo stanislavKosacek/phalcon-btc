@@ -21,11 +21,11 @@ cd dockerized-phalcon
 make run-dev
 ```
 
-## USE NODE + WEBPACK
+## Use node.js + Webpack
 
 Base webpack configuration is located in
 ```
-/application/front/webpack.config.js
+/application/public/front/webpack.config.js
 ```
 
 To use webpack start with installing node_modules
