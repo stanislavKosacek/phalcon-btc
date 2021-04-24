@@ -6,7 +6,7 @@ services:
       restart: always
       ports:
         - "8910:80"
-        - "8911:8911"
+#        - "8911:8911"
       volumes:
         - ./phpconfig:/usr/local/etc/php
         - ./application:/var/www/html
