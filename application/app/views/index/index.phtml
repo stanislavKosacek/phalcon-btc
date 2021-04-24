@@ -2,8 +2,9 @@
 
 echo "<h1>Hello!</h1>";
 
-echo $this->tag->linkTo(["signup", "Sign Up Here!", 'class' => 'btn btn-primary']);
 
+echo $this->url->getBaseUri();
+echo $this->url->get("index/a");
 
     ?>
     <table class="table table-bordered table-hover">

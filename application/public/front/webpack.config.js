@@ -12,6 +12,9 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     writeToDisk: true,
+    host: "0.0.0.0",
+    port: 8911,
+    public: "localhost:8911",
   },
   module: {
     rules: [

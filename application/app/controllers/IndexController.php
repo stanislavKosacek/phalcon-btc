@@ -2,14 +2,12 @@
 
 use Phalcon\Mvc\Controller;
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
-    /**
-     * Welcome and user list
-     */
+
     public function indexAction()
     {
-		//$this->assets->addJs('front/dist/bundle.js');
+
         $this->view->users = "test";
     }
 }
