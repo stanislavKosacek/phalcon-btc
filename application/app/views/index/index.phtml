@@ -1,31 +1,17 @@
-<?php
+<h1>Bitcoin price</h1>
 
-echo "<h1>Hello!</h1>";
-
-
-echo $this->url->getBaseUri();
-echo $this->url->get("index/a");
-
-    ?>
-    <table class="table table-bordered table-hover">
-        <thead class="thead-light">
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Email</th>
-        </tr>
-        </thead>
-        <tfoot>
-        <tr>
-            <td colspan="3">Users quantity: 10</td>
-        </tr>
-        </tfoot>
-        <tbody>
-
-            <tr>
-                <td>Standa</td>
-                <td>Kosacek</td>
-                <td>test@test.test</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="bitcoin">
+	<div class="bitcoin_prices">
+		<div class="bitcoin_prices_item">
+			<div class="bitcoin_prices_item_currency">USD</div>
+			<div class="bitcoin_prices_item_price">49671.80</div>
+		</div>
+		<div class="bitcoin_prices_item">
+			<div class="bitcoin_prices_item_currency">EUR</div>
+			<div class="bitcoin_prices_item_price">41934.30</div>
+		</div>
+	</div>
+	<div class="bitcoin_reload">
+		<button class="bitcoin_reload_button">Update</button>
+	</div>
+</div>
