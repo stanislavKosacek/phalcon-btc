@@ -3,6 +3,7 @@
 use Phalcon\Mvc\Controller;
 use Phalcon\Tag;
 use Phalcon\Assets\Asset\Js;
+
 class BaseController extends Controller
 {
 
@@ -10,11 +11,11 @@ class BaseController extends Controller
 	{
 		$this->assets->addAsset(new Js(
 			'front/dist/bundle.js',
-			true,
-			true,
+			TRUE,
+			TRUE,
 			[],
-			null,
-			true
+			NULL,
+			TRUE
 		));
 		Tag::setTitle('Bitcoin price');
 	}
