@@ -38,7 +38,12 @@ class Btc
 	}
 
 
-	public static function createSelfFromCoindeskJson(object $json)
+
+	/**
+	 * @param object $json
+	 * @return Btc
+	 */
+	public static function createSelfFromCoindeskJson(object $json): Btc
 	{
 		return new Btc($json->bpi->USD->rate_float, $json->bpi->EUR->rate_float);
 	}

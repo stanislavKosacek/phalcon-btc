@@ -5,6 +5,7 @@ use Phalcon\Loader;
 use Phalcon\Mvc\Application;
 use Phalcon\Url as UrlProvider;
 use Phalcon\Mvc\View;
+use Phalcon\Config;
 
 
 define('BASE_PATH', dirname(__DIR__));
@@ -46,6 +47,15 @@ $di['url'] = function () {
 
 	return $url;
 };
+
+$di->set(
+	'config',
+	function () {
+		$configData = require APP_PATH .  '/../config/config.php';
+
+		return new Config($configData);
+	}
+);
 
 
 // Handle the request

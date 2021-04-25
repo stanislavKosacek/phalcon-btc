@@ -9,22 +9,33 @@ use GuzzleHttp\Exception\GuzzleException;
 class BtcRequest
 {
 
+	private string $coindeskApiUrl;
+
+
+
+	public function __construct(string $coindeskApiUrl)
+	{
+		$this->coindeskApiUrl = $coindeskApiUrl;
+	}
+
+
+
 	public function getBtc(): Btc
 	{
-			try {
-				$client = new Client(["timeout" => 1000]);
-				$response = $client->request("GET", "https://api.coindesk.com/v1/bpi/currentprice.json", [
-					'headers' => [
-						"content-type" => "application/json",
-					],
-				]);
-				$json = json_decode($response->getBody());
+		try {
+			$client = new Client(["timeout" => 1000]);
+			$response = $client->request("GET", $this->coindeskApiUrl, [
+				'headers' => [
+					"content-type" => "application/json",
+				],
+			]);
+			$json = json_decode($response->getBody());
 
-				return Btc::createSelfFromCoindeskJson($json);
-			} catch (JsonException $e) {
-			} catch (GuzzleException $e) {
-			}
+			return Btc::createSelfFromCoindeskJson($json);
+		} catch (JsonException $e) {
+		} catch (GuzzleException $e) {
 		}
+	}
 
 
 }
