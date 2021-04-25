@@ -62,6 +62,7 @@ h1 {
   border-radius: 10px;
   text-align: center;
   font-size: 2rem;
+  box-shadow: 5px 8px 22px 5px rgba(48,48,48,0.48);
 }
 
 .bitcoin_prices_item_currency {
@@ -101,6 +102,7 @@ h1 {
   text-decoration: none;
   border-radius: 10px;
   transition: color 0.2s, background-color 0.2s;
+  box-shadow: 5px 8px 22px 5px rgba(48,48,48,0.48);
 }
 
 .bitcoin_reload_button:hover {
@@ -131,5 +133,28 @@ h1 {
   .bitcoin_reload_button {
     padding: 12px 40px;
     font-size: 1rem;
+  }
+}
+
+.lds-dual-ring {
+  display: inline-block;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

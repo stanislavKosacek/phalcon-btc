@@ -4,14 +4,14 @@
 	<div class="bitcoin_prices">
 		<div class="bitcoin_prices_item">
 			<div class="bitcoin_prices_item_currency">USD</div>
-			<div class="bitcoin_prices_item_price"><?php echo number_format($btc->getUsdPrice(), 2, ",", " "); ?></div>
+			<div class="bitcoin_prices_item_price"><?php echo number_format($btc->getUsdPrice(), 2, ".", ""); ?></div>
 		</div>
 		<div class="bitcoin_prices_item">
 			<div class="bitcoin_prices_item_currency">EUR</div>
-			<div class="bitcoin_prices_item_price"><?php echo number_format($btc->getEurPrice(), 2, ",", " "); ?></div>
+			<div class="bitcoin_prices_item_price"><?php echo number_format($btc->getEurPrice(), 2, ".", ""); ?></div>
 		</div>
 	</div>
 	<div class="bitcoin_reload">
-		<button class="bitcoin_reload_button">Update</button>
+		<button id="updatePrice" class="bitcoin_reload_button">Update</button>
 	</div>
 </div>
