@@ -2,7 +2,7 @@
 
 Phalcon dockerized demo project base on Debian image with PHP 7.4, Apache, Composer, Node + Webpack
 
-You cen see demo on <https://btc.skosacek.cz/>.
+You can see demo on <https://btc.skosacek.cz/>.
 
 Learn more about basic work with this project (eg. how to work with the built-in webpack or composer) on my other repository page: <https://github.com/stanislavKosacek/dockerized-phalcon>.
 
