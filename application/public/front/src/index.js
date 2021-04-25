@@ -1,15 +1,10 @@
 import {BitcoinPricesItem} from "./BitcoinPricesItem";
 import './style.css';
 
-let timer = 30;
-const updatePriceBtn = document.querySelector('#updatePrice');
-const updatePriceBtnText = updatePriceBtn.textContent;
-updatePriceBtn.textContent = `${updatePriceBtnText} ${timer}`;
-
-const updatePrice = () => {
+window.updatePrice = (apiUrl, timer, configTimer, updatePriceBtn, updatePriceBtnText) => {
 	updatePriceBtn.textContent = "";
 	updatePriceBtn.classList.add("lds-dual-ring")
-	fetch('/api/btc')
+	fetch(apiUrl)
 		.then(response => response.json())
 		.then(json => {
 			const bitcoinPricesElm = document.querySelector('.bitcoin_prices');
@@ -23,21 +18,10 @@ const updatePrice = () => {
 				price: json.eur
 			}));
 
-			timer = 30;
+			window.timer = configTimer;
 			updatePriceBtn.classList.remove("lds-dual-ring")
-			updatePriceBtn.textContent = `${updatePriceBtnText} ${timer}`;
+			updatePriceBtn.textContent = `${updatePriceBtnText} ${configTimer}`;
 		})
 }
 
-setInterval(() => {
-	timer--
-	if (timer === 0) {
-		updatePrice();
-	}
-	if (!updatePriceBtn.classList.contains("lds-dual-ring")) {
-		updatePriceBtn.textContent = `${updatePriceBtnText} ${timer}`
-	}
-}, 1000)
-
-updatePriceBtn.addEventListener('click', updatePrice);
 
